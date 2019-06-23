@@ -1,0 +1,24 @@
+{
+  "name": "thor-web-rest",
+  "version": "1.0.0",
+  "description": "rest route use fastify",
+  "main": "server.js",
+  "dependencies": {
+    "fastify": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amdersz5g7/thor-web-rest.git"
+  },
+  "author": "thor-team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amdersz5g7/thor-web-rest/issues"
+  },
+  "homepage": "https://github.com/amdersz5g7/thor-web-rest#readme"
+}
