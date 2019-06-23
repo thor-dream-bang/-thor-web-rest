@@ -9,6 +9,11 @@ fastify.register(require('./v1/corporate'), { prefix: '/v1' })
 fastify.register(require('./v2/user'), { prefix: '/v2' })
 fastify.register(require('./v2/corporate'), { prefix: '/v2' })
 
+// Declare a route
+fastify.get('/', function (request, reply) {
+  reply.send({ home: 'welcome REST' })
+})
+
 // Run the server!
 const start = async () => {
   try {
