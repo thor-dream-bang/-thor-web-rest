@@ -39,11 +39,11 @@ async function view_user (fastify, req) {
     let data = [];
     if ([req.params.id] > 0){
       data = await client.query(
-        'SELECT * from pengguna WHERE id=$1;', [req.params.id],
+        'SELECT a.*, b.id_token from pengguna a left join register b on a.id=b.id_pengguna WHERE a.id=$1 order by a.id;', [req.params.id],
       )
     } else {
       data = await client.query(
-        'SELECT * from pengguna;'
+        'SELECT a.*, b.id_token from pengguna a left join register b on a.id=b.id_pengguna order by a.id;'
       )
     }      
     
@@ -57,11 +57,11 @@ async function view_hoby (fastify, req) {
     let data = [];
     if ([req.params.id] > 0){
       data = await client.query(
-        'SELECT b.nama, a.* from hobi a join pengguna b on a.id_pengguna = b.id WHERE id_pengguna=$1;', [req.params.id],
+        'SELECT * from pengguna a left join register b on a.id=b.id_pengguna left join hobi c on a.id=c.id_pengguna WHERE a.id=$1 order by a.id;', [req.params.id],
       )
     } else {
       data = await client.query(
-        'SELECT b.*, a.hobitext from hobi a join pengguna b on a.id_pengguna = b.id;'
+        'SELECT * from pengguna a left join register b on a.id=b.id_pengguna left join hobi c on a.id=c.id_pengguna order by a.id;'
       )
     }      
     
