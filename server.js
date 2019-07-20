@@ -15,7 +15,7 @@ fastify.get('/', function (request, reply) {
 })
 
 fastify.register(require('fastify-postgres'), {  
-  connectionString: 'postgres://kgycouwupiubij:96c1f9e868bc10f9872106e19b18557a2fd10fcc454a46fb7d3003d6617c28aa@ec2-50-19-254-63.compute-1.amazonaws.com:5432/d16jj5dn3fcl5b?ssl=true'
+  connectionString: 'postgres://qedzgmnbkicyhd:571e87bf75c55013a85393609b17a0b01a90bff9627126a4fdcc997c0998bed2@ec2-54-83-1-101.compute-1.amazonaws.com:5432/d8k65hp1n2q9f7'
 })
 
 fastify.get('/user', async (req, reply) => {
